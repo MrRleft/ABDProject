@@ -1,0 +1,90 @@
+.avatar img {
+    width: 400px;
+    border-radius: 5%;
+}
+
+.avatarMod {
+    padding: 1%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.avatarMod img {
+    width: 400px;
+    border-radius: 5%;
+}
+
+.userData, .adminView {
+    width: 40%;
+    padding: 1%;
+   /* border: 3px solid #FFC107;
+    -webkit-border-radius: 15px;
+    border-radius: 15px; */
+}
+
+.modificaView {
+    border: 3px solid #FFC107;
+    padding: 1%;
+    -webkit-border-radius: 15px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.adminView {
+    margin-top: 1%;
+}
+
+input[type=text], input[type=password], input[type=date], input[type=email]  {
+    width: 97%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+button {
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #FFC107;
+    border-radius: 6px;
+    border: 1.42px solid #0016b0;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+    background-color: black;
+    color: #FFC107;
+}
+
+legend{
+    border: 2px solid #FFC107;
+    border-radius: 25px;   
+    background-color: #FFEA83;
+    color: black;
+    padding: 1.7%;
+} 
+span{
+    padding-left: 7px;
+    border: 2px solid #FFC107;
+    border-radius: 25px;     
+}
+
+#modCont {
+    margin-top: 1%;
+}
+
+.perfil {
+    display: flex;
+    justify-content: space-around;
+    border: 3px solid #FFC107;
+    border-radius: 15px; 
+    padding: 1%;
+}

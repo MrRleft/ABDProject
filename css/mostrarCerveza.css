@@ -1,0 +1,178 @@
+@font-face {
+	font-family: Roboto-Regular;
+	src: url(../fonts/Roboto-Regular.ttf);
+}
+
+.mostrarCerveza {
+	border: 3px solid #FFC107;
+	border-radius: 10px; 
+	margin-left: center;
+	margin-bottom: 10px;
+}
+
+.nombreCerveza {
+	padding-left: 10px;
+	-webkit-border-radius: 15px;     
+	background-color: #FFC107;    
+}
+
+.contenidoCerveza{
+	display: flex;
+	flex-flow: row;
+}
+
+.imagenCerveza{	
+	flex-basis: 40%;
+	justify-content: flex-start;
+}
+
+.datosCerveza {
+	margin-top: 20px;
+	flex-basis: 40%;
+}
+span{
+	border: 2px solid #FFC107;
+    border-radius: 25px;	
+}
+ 
+.container input{
+	text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;   
+    background-color: #FFC107;
+    border-radius: 6px;
+	border: 1.42px solid #0016b0;
+}
+#number{
+    margin-top: 40px;
+}
+::placeholder { 
+    color: #ffffff;
+}
+.submit,#addVal{	
+	margin-top: 20px;
+	text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #FFC107;
+    border-radius: 6px;
+    border: 1.42px solid #0016b0;
+}
+
+.container input:hover,button:hover,#addVal:hover {
+    opacity: 0.7;
+    background-color: black;
+    color: #FFC107;    
+    cursor: pointer;
+}
+fieldset{
+	border: 3px solid #FFC107;
+    border-radius: 10px;
+}
+#comentario{
+	width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    background-color: #FFEC83;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+legend{
+    border: 2px solid #FFC107;
+    border-radius: 25px;
+    background-color: #FFEA83;
+    color: black;
+} 
+/*Valoraciones five stars*/
+#dateComent{
+    float: right;
+    padding-right: 10px;
+}
+p {
+  text-align: left;
+  margin-left: 15px;
+}
+
+label {
+	font-size: 20px;
+	margin-left: 15px;
+	color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+	cursor: pointer;
+	color: orange;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+/*Mostrar Comentarios*/
+#star{
+	color: orange;
+}
+#showComment{
+    border: 3px solid #6495ED;
+    border-top-left-radius:     1em 5em;
+    border-top-right-radius:    1em 5em;
+    border-bottom-right-radius: 1em 5em;
+    border-bottom-left-radius:  1em 5em;
+    background: #d6f5f5;
+    margin-bottom: 10px;
+}
+#spanId{
+    font-weight: bold; 
+    background: white;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+#autorComent{
+    font-weight: bold;
+    font-size: 20px;
+}
+#titleComment{   
+    font-weight: bold;
+    font-size: 25px;
+}
+#spanTitle{
+    font-weight: bold; 
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid #FFC107;
+    border-radius: 25px;
+    background-color: #FFEA83;
+}
+#myBtn{
+    opacity: 0.9; 
+    width: 18%;
+    margin-left:80%;
+    margin-bottom:10px;
+}
+#starOrange{
+    color: orange;
+    font-size: 30px;
+}
+#starGrey{
+    color: grey;
+    font-size: 30px;
+}
+#puntuacionMedia{
+    margin-left: 25px; 
+    margin-bottom: 15px; 
+}

@@ -1,0 +1,292 @@
+@font-face {
+	font-family: miFuente;
+	src: url(../fonts/Roboto-Light.ttf);
+}
+
+body {
+	font-family: miFuente;
+	margin: 0;
+}
+
+#contenedor {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	overflow: hidden;
+
+}
+
+.container{
+	background: white;
+	padding: 35px 60px 35px;
+	min-height: 70vh; /* para el footer abajo*/
+	margin-top: 185px;
+}
+
+
+a {
+	color: #2a2929;
+	text-decoration: none;	
+}
+
+
+.header{
+	position: fixed;
+	width: 100%;
+	z-index: 200;
+	width: 100%;
+	/*max-width: 2000px;*/
+}
+
+
+
+.header, .footer {
+	background-color: #FFC107;
+}
+
+
+#up {
+	/*padding: 5px;*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 24px;
+}
+
+
+
+#titulo>a>img {
+	width: 450px;
+	padding: 8px;
+}
+
+#login {
+	display: flex;
+	flex-direction: column;
+	font-size: 22px;
+}
+
+#items {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #2a2929;
+}
+
+/*#item {
+	padding: 0px 25px 0px;
+	color: #E5E7E9;
+}
+
+#items>a:hover{
+	background-color: black;
+    border-radius: 5px;
+    color: #FFC107;
+}*/
+
+#login>a:hover {
+    background-color: black;
+    border-radius: 5px;
+    color: #FFC107;
+}
+
+ul, ol {
+	list-style:none;
+}
+
+.nav > li {
+	display: inline-block;
+	padding: 0px 25px 0px;
+}
+
+.nav li a {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 24px;
+	color: #E5E7E9;
+	border-radius: 2px;
+}
+
+.nav li a:hover {
+	background-color: black;
+    border-radius: 5px;
+    color: #FFC107;
+}
+
+.nav li ul {
+	display:none;
+	background-color: black;
+	border-radius: 5px;
+	position:absolute;
+
+}
+
+.nav li:hover > ul {
+	display:block;
+}
+
+.nav li ul li {
+	position:relative;
+	right:20px;
+}
+
+.nav li ul li a{
+	text-align: center;
+}
+
+.nav li ul li ul {
+	right:-140px;
+	top:0px;
+}
+
+/****************************FOOTER******************************/
+
+.footer *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.footer{
+	width: 100%
+}
+
+
+.footer-container{
+	width: 100%;
+}
+
+.footer-main{
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	padding: 10px 0;
+	display: flex;
+	flex-wrap: wrap; 
+
+	justify-content: space-between;
+	-ms-align-items: center;
+}
+
+.footer-main .footer-columna{
+	width: calc(100% / 3);
+	text-align: justify;
+}
+
+.footer-main .footer-columna:nth-child(1){
+	padding: 0 20px;
+}
+
+
+.footer-main .footer-columna:nth-child(2){
+	padding: 0 30px;
+}
+
+.footer-main .footer-columna:nth-child(3){
+	padding: 0 50px;
+}
+
+
+.footer-main .footer-columna{
+	font-size: 19px;
+	margin-bottom: 0px;
+}
+
+
+.footer-main .footer-columna input[type="email"]{
+	border: none;
+	width: 100%;
+	border: 1px solid #2a2929;
+	padding: 10px;
+    color: #443a3a;
+	border-radius: 5px;
+}
+
+
+.footer-main .footer-columna input[type="submit"]{
+	border: none;
+	padding: 5px 40px;
+	background: #FFF;
+	color: #2a2929;
+	border: 1px solid #2a2929;
+	font-size: 18px;
+	margin-top: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.footer-main .footer-columna input[type="submit"]:hover{
+	background-color: black;
+    border-radius: 5px;
+    color: #FFC107;
+}
+
+
+.footer-main .footer-columna span p{
+	display: inline-block;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	text-decoration: none;	
+	color: #443a3a;
+	font-family : miFuente;
+}
+
+
+
+.footer-main .footer-columna span p:hover{
+	background-color: black;
+    border-radius: 5px;
+    color: #FFC107;
+}
+
+
+.footer-main .footer-columna p a{
+	display: inline-block;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	text-decoration: none;	
+	color: #726363;
+}
+
+.footer-main .footer-columna p a:hover{
+	background-color: black;
+    border-radius: 5px;
+    color: #FFC107;
+}
+
+.footer-copy-redes{
+	width: 100%;
+	background: #000;
+	border-top: 2px solid #FFF;
+}
+
+.main-copy-redes{
+	width: 100%;
+	max-width: 1000px;
+	padding: 5px 0;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	-ms-align-items: center;
+}
+
+
+.main-copy-redes .footer-copy{
+	width: 100%;
+	color: #FFF;
+	font-size: 16px;
+	text-align: center;
+}
+
+.main-copy-redes .footer-copy p{
+	padding: 10px;
+}
+
+
+/************************************************************/
+
+

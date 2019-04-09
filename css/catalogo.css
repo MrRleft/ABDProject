@@ -1,0 +1,137 @@
+@font-face {
+	font-family: Roboto-Regular;
+	src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face{
+	font-family: Roboto-Light;
+	src: url(../fonts/Roboto-Light.ttf);
+}
+
+
+div.item {
+    border: 1px #FFC107 solid;
+    border-radius: 1px;
+    margin: 0.1%;
+    padding: 1%;
+    width: 30%;
+    display: inline-block;
+    background-color: #f3f2f1;
+    height: 259px;
+    min-width: 320px;
+	min-height: 136px;
+}
+
+.item>div.seccionItem{
+	float:left;
+	width: 50%;
+}
+
+/
+#seccionItem img{ 
+	max-width: 99%; 
+}
+
+.descripcion{
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 80%;
+	flex-direction:colum;
+}
+
+.descripcion>h1{
+	font-family: Roboto-Regular;
+	font-size: 20px;
+}
+
+
+
+.descripcion>h1 a:hover {
+	background-color: black;
+    border-radius: 5px;
+    color: #FFC107;
+}
+
+
+.ficha{
+	padding-top: 0.5%;
+	padding-left: 7%;
+	width: 80%;
+	background-color: #FBFBEF;
+	line-height:7px;
+	font-family: Roboto-Regular;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 8%;
+    margin-top: 8%;
+    border-bottom: 2px solid #dbdbdb;
+    padding-bottom: 5px;
+    color:#505050;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+section#filtros {
+    display: none;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+section#filtros fieldset{
+	border-radius: 5px;
+	border-color: #FFC107;
+}
+
+
+.alert-info img{
+	width: 30px;
+	cursor: pointer;
+}
+
+
+.alert-info img:hover{
+	background-color: black;
+    border-radius: 5px;
+    color: #FFC107;
+}
+
+
+.imagenes img {
+	border: none;
+	border-radius:50%;
+	overflow:hidden;
+	width:80%;
+	height:80%;
+}
+
+
+.imagenes img:hover {
+    border-radius:50%;
+	box-shadow: 0px 0px 15px 15px #FFC107;
+	transform:scale(1.1);
+}
+
+#puntuacionMedia{
+    margin-left: 40px; 
+    margin-top: 5px; 
+}
+
+#starOrange{
+    color: orange;
+    font-size: 20px;
+}
+#starGrey{
+    color: grey;
+    font-size: 20px;
+}
+
+#ref {
+	margin-left: 88%;
+	border: none;
+	border-radius:50%;
+}
+
+#ref:hover {
+	border-radius:50%;
+	box-shadow: 0px 0px 5px 5px #FFC107;
+	transform:scale(1.1);
+}	
