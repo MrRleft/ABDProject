@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cervezas>
+    <cerveza id="1">
+        <fabricante>NULL</fabricante>
+        <nombre>Ausesken Witbeer Blanca</nombre>
+        <grado>4.8</grado>
+        <capacidad>33</capacidad>
+        <precio>2.25</precio>
+        <pais>España</pais>
+        <artesana>1</artesana>
+        <color>blanca</color>
+        <grano>trigo</grano>
+        <tipo>lager</tipo>
+        <Imagen>img/imagenCervezas/cerveza-ausesken-witbeer-blanca.jpg</Imagen>
+        <valoracionMedia>2</valoracionMedia>
+    </cerveza>
+</cervezas>

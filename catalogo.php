@@ -18,6 +18,7 @@
     <body>    
         <div id="contenedor">
             <?php require('./includes/comun/header.php'); ?>
+<!--  
             <div class="container">
             <header>
                 <div class="alert-info">
@@ -26,6 +27,7 @@
                     <input id="ref" type="image" src="img/icons/refresh.png" onClick="location.href=location.href">
                 </div>
             </header>
+         
             <section id="filtros">
                 <form action="catalogo.php" method="post">
                 <?php
@@ -40,7 +42,7 @@
                 <input type="submit" name="buscar" value="Buscar">
                 </form>
             </section>
-
+-->
             <div id="filtro">
                 <?php
                 $Cervezas = controllerCervezas::getCervezas($sql, $sqlOrden);
