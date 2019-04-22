@@ -33,7 +33,15 @@
 
 		<div class="container"><!--bloque del contenido central-->	
 			
-			<div id="infoBeer"></div>	
+			<div id="infoBeer"></div>
+			<div id="buyDiv"><?php	
+			if(isset($_SESSION['login']) && $_SESSION['login']){
+				echo '<form  action="includes/procesarCesta.php" method="GET">';			
+				echo '<input type="number" id=number name="unidades" min="1" placeholder="Unidades">';
+				echo '<button class="submit" type="submit" name="cerveza" value="'. $_GET['id'].'">Añadir a la cesta</button>';
+				echo '</form>';
+			}
+			?></div>
 
 		</div><!-- Fin del container -->
 

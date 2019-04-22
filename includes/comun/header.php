@@ -37,6 +37,8 @@
 					<?php 
 					if(isset($_SESSION['login']) && $_SESSION['login']===true) { ?>
 						<ul>
+						<li><a href='listaPedidos.php'>MIS PEDIDOS</a></li>
+						<li><a href = 'mostrarCesta.php'> MI CESTA </a> </li>
 							<?php 
 								if(isset($_SESSION['esAdmin']) && $_SESSION['esAdmin']===true){ ?>
 									<li><a href = 'admin.php'> ADMIN </a> </li>
@@ -47,4 +49,3 @@
 			</ul>
 	</div>
 </div> <!-- Cierre de header-->
-
