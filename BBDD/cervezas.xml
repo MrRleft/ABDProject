@@ -14,4 +14,102 @@
         <Imagen>img/imagenCervezas/cerveza-ausesken-witbeer-blanca.jpg</Imagen>
         <valoracionMedia>2</valoracionMedia>
     </cerveza>
+        <cerveza id="2">
+        <fabricante>NULL</fabricante>
+        <nombre>Cerveza La Vella Caravana Bòria</nombre>
+        <grado>6.2</grado>
+        <capacidad>33</capacidad>
+        <precio>3.45</precio>
+        <pais>España</pais>
+        <artesana>1</artesana>
+        <color>roja</color>
+        <grano>trigo</grano>
+        <tipo>ale</tipo>
+        <Imagen>img/imagenCervezas/cerveza-la-vella-caravana-boria.jpg</Imagen>
+        <valoracionMedia>2</valoracionMedia>
+    </cerveza>
+    <cerveza id="3">
+        <fabricante>NULL</fabricante>
+        <nombre>La Vella Caravana Mataelefantes</nombre>
+        <grado>6.5</grado>
+        <capacidad>33</capacidad>
+        <precio>4.2</precio>
+        <pais>España</pais>
+        <artesana>1</artesana>
+        <color>negra</color>
+        <grano>cebada</grano>
+        <tipo>pilsner</tipo>
+        <Imagen>img/imagenCervezas/cerveza-la-vella-caravana-mataelefantes.jpg</Imagen>
+        <valoracionMedia>2</valoracionMedia>
+    </cerveza>
+    <cerveza id="4">
+        <fabricante>NULL</fabricante>
+        <nombre>La Vella Caravana Maltrago</nombre>
+        <grado>9.1</grado>
+        <capacidad>33</capacidad>
+        <precio>6.5</precio>
+        <pais>España</pais>
+        <artesana>1</artesana>
+        <color>tostada</color>
+        <grano>trigo</grano>
+        <tipo>lager</tipo>
+        <Imagen>img/imagenCervezas/cerveza-la-vella-caravana-maltrago.jpg</Imagen>
+        <valoracionMedia>1</valoracionMedia>
+    </cerveza>
+    <cerveza id="5">
+        <fabricante>NULL</fabricante>
+        <nombre>As de Cors Weizen</nombre>
+        <grado>5</grado>
+        <capacidad>33</capacidad>
+        <precio>3.4</precio>
+        <pais>España</pais>
+        <artesana>1</artesana>
+        <color>rubia</color>
+        <grano>cebada</grano>
+        <tipo>lager</tipo>
+        <Imagen>img/imagenCervezas/cerveza-as-de-cors-weizen.jpg</Imagen>
+        <valoracionMedia>1</valoracionMedia>
+    </cerveza>
+    <cerveza id="6">
+        <fabricante>NULL</fabricante>
+        <nombre>Marina Mas Cremat Porter</nombre>
+        <grado>4.5</grado>
+        <capacidad>50</capacidad>
+        <precio>5</precio>
+        <pais>España</pais>
+        <artesana>1</artesana>
+        <color>ambar</color>
+        <grano>avena</grano>
+        <tipo>ale</tipo>
+        <Imagen>img/iagenCervezas/cerveza-marina-mas-cremat-porter.jpg</Imagen>
+        <valoracionMedia>1</valoracionMedia>
+    </cerveza>
+    <cerveza id="7">
+        <fabricante>NULL</fabricante>
+        <nombre>Faust Krausen Naturtrüb</nombre>
+        <grado>6.5</grado>
+        <capacidad>50</capacidad>
+        <precio>8.99</precio>
+        <pais>Alemania</pais>
+        <artesana>1</artesana>
+        <color>rubia</color>
+        <grano>trigo</grano>
+        <tipo>lager</tipo>
+        <Imagen>img/imagenCervezas/cerveza-faust-krausen-naturtrub.jpg</Imagen>
+        <valoracionMedia>1</valoracionMedia>
+    </cerveza>
+    <cerveza id="8">
+        <fabricante>NULL</fabricante>
+        <nombre>Ayinger Celebrator Doppelbock</nombre>
+        <grado>6</grado>
+        <capacidad>33</capacidad>
+        <precio>5.8</precio>
+        <pais>Alemania</pais>
+        <artesana>1</artesana>
+        <color>blanca</color>
+        <grano>cebada</grano>
+        <tipo>lager</tipo>
+        <Imagen>img/imagenCervezas/cerveza-ayinger-celebrator-doppelbock.jpg</Imagen>
+        <valoracionMedia>1</valoracionMedia>
+    </cerveza>
 </cervezas>
