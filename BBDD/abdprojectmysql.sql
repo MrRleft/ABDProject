@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-04-2019 a las 12:59:29
+-- Tiempo de generación: 22-04-2019 a las 18:32:46
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.1.28
 
@@ -49,20 +49,8 @@ INSERT INTO `pedidos` (`idPedido`, `estado`, `fechaPedido`, `fechaEntrega`, `fec
 --
 -- Estructura de tabla para la tabla `pedidos-cervezas`
 --
-
-CREATE TABLE `pedidos-cervezas` (
-  `idCerveza` int(5) NOT NULL,
-  `idPedido` int(5) NOT NULL,
-  `unidades` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabla que representa la relación pedidos-cervezas';
-
---
--- Volcado de datos para la tabla `pedidos-cervezas`
---
-
-INSERT INTO `pedidos-cervezas` (`idCerveza`, `idPedido`, `unidades`) VALUES
-(4, 30, 2),
-(6, 29, 12);
+-- Error leyendo la estructura de la tabla abdprojectmysql.pedidos-cervezas: #1932 - Table 'abdprojectmysql.pedidos-cervezas' doesn't exist in engine
+-- Error leyendo datos de la tabla abdprojectmysql.pedidos-cervezas: #1064 - Algo está equivocado en su sintax cerca 'FROM `abdprojectmysql`.`pedidos-cervezas`' en la linea 1
 
 -- --------------------------------------------------------
 
@@ -89,6 +77,7 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`nombreUsuario`, `password`, `email`, `fechaNac`, `ciudad`, `avatar`, `rol`, `nombre`, `apellidos`) VALUES
 ('cristiano', '$2y$10$Vevg1NMiHHHA3PyqZKD5e.uF/7NKHmjJtyDSrK2c2rSZjSv3.YM4G', 'cr@cr.es', '1985-02-05', 'Madeira', 'img/users/cr.jpg', 'user', 'Cristiano', 'Ronaldo Sánchez'),
 ('CuentaPrueba', '$2y$10$T44k1POLIB7zULkYuLedMuml/h5rLrqE0O5W6HWPxWfQZrR7Fx0XS', 'CuentaPrueba@Soylacuentadeprueba.sisoyyo', '0001-11-03', 'Madrid', 'img/users/prueba.jpg', 'user', 'Cuenta', 'Prueba'),
+('CuentaPruebaAdmin', '$2y$10$wR6kWpbEcLCEXHdC3pC3VO/lRZx6t27P8Da/dHrCSQoD495nviIYe', 'prueba@prueba.com', '2019-12-31', 'Pruebaland', 'img/users/pruebaadmin.jpg', 'user', 'cuenta', 'admin'),
 ('Ruben', '$2y$10$/zqO9CpcgBMjr3OAmcZUi.Im.6cWSntAMPpQ8hohkIU4vND7R/Sye', 'wiuehd@em.com', '0121-12-12', 'isudhq', 'img/users/', 'user', 'Ruben', 'Ruebn'),
 ('rubenoide', '$2y$10$G5eD1G.k/nTQ4FkfYIdMT.6aq4Zc1joHQC3ZQMxXFIC0Y/IqDiX66', 'Rubenizquierdo96@gmail.com', '2018-02-06', 'Madrid', 'img/users/', 'user', 'Izquierdo', 'Izquierdo');
 
@@ -120,12 +109,6 @@ INSERT INTO `usuarios-pedidos` (`idUsuario`, `idPedido`) VALUES
 --
 ALTER TABLE `pedidos`
   ADD PRIMARY KEY (`idPedido`);
-
---
--- Indices de la tabla `pedidos-cervezas`
---
-ALTER TABLE `pedidos-cervezas`
-  ADD PRIMARY KEY (`idCerveza`);
 
 --
 -- Indices de la tabla `usuarios`
