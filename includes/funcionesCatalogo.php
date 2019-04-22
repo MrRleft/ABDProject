@@ -1,35 +1,4 @@
 <?php
-    function mostrarCervezas($Cervezas){
-        foreach ($Cervezas as $cerveza) {
-            echo "<div class='item'>";      
-                echo "<div class ='seccionItem'>";
-                    echo "<div class = 'imagenes'>";
-                        echo "<a href = mostrarCerveza.php?id=" . $cerveza->getIdCerveza() . "> <img alt='Imagen de cerveza' src=". $cerveza->getImagen()." /> </a>";
-                                $maxI = $cerveza->getValoracion();
-                                echo "<div id='puntuacionMedia'>" ;
-                                /*echo "<p id='titleComment'><span id='spanTitle'>Puntuación media: </span></p>";*/
-                                for($i=1;$i<=$maxI;$i++)
-                                    echo"<label id=starOrange>★</label>";
-                                for($l=$maxI;$l<5;$l++)
-                                    echo"<label id=starGrey>★</label>";
-                                echo "</div>";
-                    echo "</div>";
-                echo "</div>";
-                echo "<div class ='seccionItem'>";
-                    echo "<div class = 'descripcion'>";
-                        echo "<h1> <a href = mostrarCerveza.php?id=" . $cerveza->getIdCerveza() . ">" . $cerveza->getNombre() . "</a></h1>";
-                        echo "<div  class = 'ficha'>";
-                                echo "<p>" . $cerveza->getPais()."</p>";
-                                 echo "<p>" . $cerveza->getTipo()."</p>";
-                                echo "<p>" . $cerveza->getColor(). "  " . $cerveza->getGrado()." º " . $cerveza->getCapacidad() . " cL" . "</p>";
-                        echo "</div>";
-                        echo "<p>" . $cerveza->getPrecio(). " € ". "</p>";
-                    echo "</div>";
-                echo "</div>";
-            echo "</div>";
-        }
-    }
-
     function artesanas($sql){
         echo '<fieldset>';
                 echo '<legend>Procedencia</legend>';

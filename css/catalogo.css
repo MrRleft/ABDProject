@@ -26,7 +26,6 @@ div.item {
 	width: 50%;
 }
 
-/
 #seccionItem img{ 
 	max-width: 99%; 
 }
@@ -68,7 +67,6 @@ div.item {
     color:#505050;
     -webkit-tap-highlight-color: transparent;
 }
-
 
 section#filtros {
     display: none;

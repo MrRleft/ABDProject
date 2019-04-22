@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE cerveza SYSTEM "cervezas.dtd">
 <cervezas>
     <cerveza id="1">
         <fabricante>NULL</fabricante>
@@ -14,7 +15,7 @@
         <Imagen>img/imagenCervezas/cerveza-ausesken-witbeer-blanca.jpg</Imagen>
         <valoracionMedia>2</valoracionMedia>
     </cerveza>
-        <cerveza id="2">
+    <cerveza id="2">
         <fabricante>NULL</fabricante>
         <nombre>Cerveza La Vella Caravana Bòria</nombre>
         <grado>6.2</grado>
@@ -81,7 +82,7 @@
         <color>ambar</color>
         <grano>avena</grano>
         <tipo>ale</tipo>
-        <Imagen>img/iagenCervezas/cerveza-marina-mas-cremat-porter.jpg</Imagen>
+        <Imagen>img/imagenCervezas/cerveza-marina-mas-cremat-porter.jpg</Imagen>
         <valoracionMedia>1</valoracionMedia>
     </cerveza>
     <cerveza id="7">
