@@ -19,6 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="css/mostrarPedido.css" />
 	<link rel="stylesheet" type="text/css" href="css/footer.css"/>
 	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript" src="js/mostrarCervezaMethods.js"></script>  
 	<title>Mi cesta</title>
 </head>
 
@@ -36,12 +37,10 @@
 					controllerPedidos::eliminarCesta($cesta->getIdPedido());
 					$cesta = null;
 				}
-						
 				if($cesta == null){
 					echo "<div><h1>Tu cesta está vacía.<h1></div>";
 				}else {
 					//$cesta = controllerPedidos::loadPedido($idCesta);
-
 					foreach ($cesta->getCervezas() as $idCerveza) {
 						if(isset($_POST[$idCerveza])){
 							controllerPedidos::eliminarElementoCesta($idCerveza, $cesta->getIdPedido());
@@ -56,38 +55,21 @@
 						$unidades = $cesta->getUnidades();
 						$i = 0;
 						$total = 0;
-
-						echo "<div>";
+						echo "<div id='infoBeer'><p>Cargando la cesta</p></div>";
 						foreach ($cervezas as $idCerveza) {
-							$cerveza = controllerCervezas::loadCerveza($idCerveza);
-							echo "<div class= 'mostrarCerveza'>";
-								echo "<div class= 'nombreCerveza'>";
-									echo "<h1>" . $cerveza->getNombre() . "</h1>";
-								echo "</div>";//nombre Cerveza
-								echo "<div class= 'contenidoCerveza'>";
-									echo "<div class= 'imagenCerveza'>";
-										echo "<img alt='Imagen de cerveza' src=". $cerveza->getImagen()." width='300' height='300' />";
-									echo "</div>";//imagen cerveza
-										//Datos del pedido
-									echo "<div class= 'datosCerveza'>";
-										echo "<p>Datos del pedido: </p>";
-										echo "<p><span>Precio unidad: </span>" . $cerveza->getPrecio() . " €</p>";
-										echo "<p><span>Unidades: </span>" . $unidades[$i] . "</p>";
-										echo "<p><span>Total: </span>" . $cerveza->getPrecio() * $unidades[$i] . " €</p>";
-									echo "</div>";//cierro div datos cerveza
-									echo "<form action='mostrarCesta.php' method='post'>";
-										$total = $total + ($cerveza->getPrecio()*$unidades[$i]);
-										echo "<button class='delete' type='submit' name='" . $idCerveza . "' value='Eliminar'>Eliminar de la cesta</button>";
-									echo "</form>";
-								echo "</div>";//contenidocerveza
-							echo "</div>";//mostrar cerveza
-							$i++;
+							echo "	<script>
+									AddBeerTolist(".$idCerveza.");
+									</script>";
 						}
-						echo "<div class='right'><h1 align='right'>Total: " . $total . " €</h1></div>";
-						echo "<div class='left'><form action='mostrarCesta.php' method='post' align='right'>";
-								echo "<button class='submit' type='submit' name='Eliminar' value='Eliminar cesta'>Eliminar la cesta</button>";
-						echo "</form></div>";
-						echo "</div>";
+						foreach ($unidades as $unids) {
+							echo "	<script>
+									AddUnitsTolist(".$unids.");
+									</script>";
+						}
+						sleep(0.1);
+						echo "	<script>
+									var total = GetTextBeerToListCesta();
+								</script>";
 						?>
 						<button class='submit' onclick="myFunction()">Comprar la cesta</button>
 							<div id="procesarCesta">

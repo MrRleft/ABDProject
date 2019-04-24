@@ -60,20 +60,7 @@
 					    echo "<h2><li><a id='pedido' href = mostrarPedido.php?idPedido=" . $pedido->getIdPedido() . ">Id del pedido: " . $pedido->getIdPedido() . "</a></li></h2>";
 					    
 					    $estado = $pedido->getEstado();
-					    echo "<p id=state>Su estado es :<span id=radius> $estado</span><p>";
-
-					    $unidades = $pedido->getUnidades();
-					    $cervezas = $pedido->getCervezas();
-
-					    for($j = 0; $j < count($unidades);$j++){
-					    	$numUnidades = array_values($unidades)[$j];
-					    	$cerveza = controllerCervezas::loadCerveza(array_values($cervezas)[$j]);
-					    	$nombre = $cerveza->getNombre();
-
-					    	echo "<p id=beer> -Cerveza: <span id=nombre>$nombre</span>, Unidades: $numUnidades";
-					    }
-					   
-						
+					    echo "<p id=state>Su estado es :<span id=radius> $estado</span><p>";	
 					}
 					echo "</ul>";
 				}
