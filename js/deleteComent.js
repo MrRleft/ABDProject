@@ -1,7 +1,7 @@
 
-function deleteVal(idComent, idCer) {
+function deleteVal(idComent) {
 
-	$.get('includes/deleteComent.php', {q: idComent, w:idCer}, 
+	$.get('includes/deleteComent.php', {q: idComent}, 
     function(returnedData){
          console.log(returnedData);
          location.reload();

@@ -48,13 +48,22 @@ function StartShowingListCesta(xml) {
     var total = 0;
     cervezas = xml.getElementsByTagName("cerveza");
     for (i = 0; i < listaIds.length; i++) {
+        currentBeer = cervezas.getElementById(listaIds[i]);
+        text += ShowBeerInList(currentBeer, total, listaUnits[i]);
+        total += currentBeer.getElementsByTagName("precio").item(0).innerHTML * listaUnits[i];
+        /*
         for (j = 0; j < cervezas.length; j++) {
+            
+
             if (cervezas[j].getAttributeNode("id").nodeValue == listaIds[i]) {
                 currentBeer = cervezas[listaIds[i] - 1];
                 text += ShowBeerInList(currentBeer, total, listaUnits[i]);
                 total += currentBeer.getElementsByTagName("precio").item(0).innerHTML * listaUnits[i];
+                
             }
+        
         }
+        */
     }
     text +=  "<div id=Total class='right'><h1 align='right'></div>";
     text +=  "<div class='left'><form action='mostrarCesta.php' method='post' align='right'>";
