@@ -2,9 +2,7 @@
 
 	session_start();
 	require_once __DIR__.'/includes/Controller/controllerPedidos.php';
-	require_once __DIR__.'/includes/Controller/controllerCervezas.php';
 	require_once __DIR__.'/includes/TO/TOPedidos.php';
-	require_once __DIR__.'/includes/TO/TOCervezas.php';
 	require_once __DIR__.'/includes/FormularioPedido.php';
 
 	if(!$_SESSION['login']){

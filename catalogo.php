@@ -1,9 +1,5 @@
 <?php
     session_start();
-    require_once __DIR__.'/includes/TO/TOCervezas.php';
-    require_once __DIR__.'/includes/Controller/controllerCervezas.php';
-    require_once __DIR__.'/includes/funcionesCatalogo.php';
-    global $sql;
 ?>
 
 <!DOCTYPE html>

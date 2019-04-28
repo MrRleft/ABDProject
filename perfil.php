@@ -41,9 +41,6 @@
 							echo '<img src="img/users/default.png">'; 
 						$_SESSION['avatar'] = $user->getAvatar();
 					?> 
-					<form action="modificarAvatar.php">
-						<label> <button id = "modCont"> Modificar foto de perfil</button> </label>
-					</form>
 				</div>
 
 				<div class = "userData">
@@ -64,17 +61,6 @@
 					</fieldset>
 				</div>
 		</div>
-
-			<?php 
-			/*if($user->rol() == 'admin'){ ?>
-				<div class = "adminView">
-					<h2> Esta vista es única para el administrador </h2>
-					<p> En ella podrá ver los diferentes cambios que puede realizar en la aplicación </p>
-						<form action="vistaAddBeers.php">
-							<label> <button> Añadir cerveza</button> </label>
-						</form>
-				</div>
-			<?php }*/ ?>
 			
 		</div>
 

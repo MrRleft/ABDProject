@@ -1,12 +1,7 @@
 <?php
 session_start();
-require_once __DIR__ . '/includes/TO/TOCervezas.php';
-require_once __DIR__ . '/includes/Controller/controllerCervezas.php';
-require_once __DIR__ . '/includes/TO/TOComentarios.php';
-require_once __DIR__ . '/includes/Controller/controllerComentarios.php';
 require_once __DIR__ . '/includes/FormularioNuevoComentarioCerve.php';
 require_once __DIR__ . '/vendor/autoload.php';
-global $sql;
 ?>
 
 <!DOCTYPE html>

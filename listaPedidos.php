@@ -2,9 +2,7 @@
 	
 	session_start();
 	require_once __DIR__.'/includes/Controller/controllerPedidos.php';
-	require_once __DIR__.'/includes/Controller/controllerCervezas.php';
 	require_once __DIR__.'/includes/TO/TOPedidos.php';
-	require_once __DIR__.'/includes/TO/TOCervezas.php';
 
 	if(!$_SESSION['login']){
 		header('Location: index.php');
@@ -38,8 +36,7 @@
 				if($listaPedidos == null){
 
 					echo "<p><h2> No tienes pedidos, " . $_SESSION['nombreUsuario'] ." </h2></p>";
-					echo " <div class='info'><p><h1> ¿ Por qué no echas un vistazo a nuestro catálogo ? </h1></p></div>";
-					echo " <div class='subinfo'><p> Puedes acceder pinchando <a href = 'catalogo.php'>aquí.</a></p></div>";
+					
 				}else {
 					echo " <h2 class=nota> Esta es la página donde puedes visualizar tus pedidos, ".  $_SESSION['nombreUsuario'] .  ". </h2>";
 					
