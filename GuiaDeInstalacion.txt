@@ -1,0 +1,11 @@
+Proyecto ABD por Rubén Izquierdo
+
+El proyecto tiene:
+    SQL: Crear, borrar, buscar, editar y relaciones entre tablas (Usuarios, pedidos y tablas que representan relaciones de 1 a N)
+    XML: Lectura de datos de un XML (base de datos de donde se cargan las diferentes cervezas)
+    MongoDB: Creación, busqueda y eliminación. (toda la gestión de comentarios que se encuentra en la vista de mostrar cerveza)
+
+Para instalarlo se necesita:
+    Importar base de datos abdprojectmysql.sql en PHPmyadmin en una base de datos del mismo nombre (sin el .sql)
+    Crear un usuario en PHPmyadmin con nombre abdprojectadmin, indicando el servidor como 127.0.0.1, poniendo como contraseña admin y dándole todos los permisos necesarios
+    Para configurar la base de datos de comentarios será necesario tener instalado MongoDB y los driver en el Xampp. Además se tendrá que crear una BBDD con nombre ABDProject y una colección con nombre comentarios

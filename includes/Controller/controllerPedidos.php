@@ -54,11 +54,6 @@ class controllerPedidos {
         $daoPedido->insertarPedidosUsuarios($idUser, $idPedido);
     }
     
-    public static function insertarPedidosGrupos($idGrupo){
-        $daoPedido = new DAOPedidos();
-        $daoPedido->insertarPedidosGrupos($idGrupo);
-    }
-
     public static function addBeers($cerveza, $unidades, $idpedido){
         $daoPedido = new DAOPedidos();
         if($unidades == NULL){

@@ -45,12 +45,6 @@ class controllerUsuario
         $daoUsuario = new DAOUsuario();
         $daoUsuario->actualizaUserPassword($nombreUsuario, $usuario, self::hashPassword($password));
     }
-
-    public static function actualizaUserAvatar($nombreUsuario, $usuario, $avatar){
-        $daoUsuario = new DAOUsuario();
-        $daoUsuario->actualizaUserAvatar($nombreUsuario, $usuario, $avatar);
-    }
-
    
     public static function esAdmin($usuario){
         $daoUsuario = new DAOUsuario();
