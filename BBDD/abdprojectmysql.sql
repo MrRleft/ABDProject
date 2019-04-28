@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-04-2019 a las 18:32:46
+-- Tiempo de generación: 28-04-2019 a las 12:37:12
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.1.28
 
@@ -42,15 +42,32 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`idPedido`, `estado`, `fechaPedido`, `fechaEntrega`, `fechaLimite`, `Direccion`) VALUES
-(30, 'enviado', '2018-05-29', NULL, NULL, 'estadio santiago bernab?u');
+(30, 'enviado', '2018-05-29', NULL, NULL, 'estadio santiago bernab?u'),
+(56, 'enviado', '2019-04-23', NULL, NULL, 'Vamos a hacer una compra de prueba'),
+(61, 'enviado', '2019-04-23', NULL, NULL, 'Compra definitiva'),
+(63, 'cesta', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `pedidos-cervezas`
 --
--- Error leyendo la estructura de la tabla abdprojectmysql.pedidos-cervezas: #1932 - Table 'abdprojectmysql.pedidos-cervezas' doesn't exist in engine
--- Error leyendo datos de la tabla abdprojectmysql.pedidos-cervezas: #1064 - Algo está equivocado en su sintax cerca 'FROM `abdprojectmysql`.`pedidos-cervezas`' en la linea 1
+
+CREATE TABLE `pedidos-cervezas` (
+  `idCerveza` int(11) NOT NULL,
+  `idPedido` int(5) NOT NULL,
+  `unidades` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `pedidos-cervezas`
+--
+
+INSERT INTO `pedidos-cervezas` (`idCerveza`, `idPedido`, `unidades`) VALUES
+(2, 56, 3),
+(2, 61, 2),
+(2, 63, 2),
+(3, 63, 4);
 
 -- --------------------------------------------------------
 
@@ -76,8 +93,7 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`nombreUsuario`, `password`, `email`, `fechaNac`, `ciudad`, `avatar`, `rol`, `nombre`, `apellidos`) VALUES
 ('cristiano', '$2y$10$Vevg1NMiHHHA3PyqZKD5e.uF/7NKHmjJtyDSrK2c2rSZjSv3.YM4G', 'cr@cr.es', '1985-02-05', 'Madeira', 'img/users/cr.jpg', 'user', 'Cristiano', 'Ronaldo Sánchez'),
-('CuentaPrueba', '$2y$10$T44k1POLIB7zULkYuLedMuml/h5rLrqE0O5W6HWPxWfQZrR7Fx0XS', 'CuentaPrueba@Soylacuentadeprueba.sisoyyo', '0001-11-03', 'Madrid', 'img/users/prueba.jpg', 'user', 'Cuenta', 'Prueba'),
-('CuentaPruebaAdmin', '$2y$10$wR6kWpbEcLCEXHdC3pC3VO/lRZx6t27P8Da/dHrCSQoD495nviIYe', 'prueba@prueba.com', '2019-12-31', 'Pruebaland', 'img/users/pruebaadmin.jpg', 'user', 'cuenta', 'admin'),
+('CuentaPrueba', '$2y$10$qG4PjQbXbDPePYHcXis8NuY9EbRuLB03dVrmXsbN2FSRv2TwLlpq.', 'prueba@profe123.com', '2019-01-01', 'pruebalandia', 'img/users/pruebaadmin.jpg', 'user', 'cuenta', 'prueba'),
 ('Ruben', '$2y$10$/zqO9CpcgBMjr3OAmcZUi.Im.6cWSntAMPpQ8hohkIU4vND7R/Sye', 'wiuehd@em.com', '0121-12-12', 'isudhq', 'img/users/', 'user', 'Ruben', 'Ruebn'),
 ('rubenoide', '$2y$10$G5eD1G.k/nTQ4FkfYIdMT.6aq4Zc1joHQC3ZQMxXFIC0Y/IqDiX66', 'Rubenizquierdo96@gmail.com', '2018-02-06', 'Madrid', 'img/users/', 'user', 'Izquierdo', 'Izquierdo');
 
@@ -90,15 +106,16 @@ INSERT INTO `usuarios` (`nombreUsuario`, `password`, `email`, `fechaNac`, `ciuda
 CREATE TABLE `usuarios-pedidos` (
   `idUsuario` varchar(25) NOT NULL,
   `idPedido` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabla que representa la relación usaurios-pedidos';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `usuarios-pedidos`
 --
 
 INSERT INTO `usuarios-pedidos` (`idUsuario`, `idPedido`) VALUES
-('cristiano', 29),
-('cristiano', 30);
+('CuentaPrueba', 56),
+('CuentaPrueba', 61),
+('CuentaPrueba', 63);
 
 --
 -- Índices para tablas volcadas
@@ -111,6 +128,13 @@ ALTER TABLE `pedidos`
   ADD PRIMARY KEY (`idPedido`);
 
 --
+-- Indices de la tabla `pedidos-cervezas`
+--
+ALTER TABLE `pedidos-cervezas`
+  ADD PRIMARY KEY (`idPedido`,`idCerveza`),
+  ADD KEY `idPedido` (`idPedido`);
+
+--
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -121,8 +145,9 @@ ALTER TABLE `usuarios`
 -- Indices de la tabla `usuarios-pedidos`
 --
 ALTER TABLE `usuarios-pedidos`
-  ADD PRIMARY KEY (`idUsuario`,`idPedido`),
-  ADD KEY `idPedido` (`idPedido`);
+  ADD PRIMARY KEY (`idPedido`,`idUsuario`),
+  ADD KEY `idPedido` (`idPedido`),
+  ADD KEY `idUsuario` (`idUsuario`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -132,24 +157,24 @@ ALTER TABLE `usuarios-pedidos`
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `idPedido` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `idPedido` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `pedidos`
+-- Filtros para la tabla `pedidos-cervezas`
 --
-ALTER TABLE `pedidos`
-  ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`idPedido`) REFERENCES `usuarios-pedidos` (`idPedido`),
-  ADD CONSTRAINT `pedidos_ibfk_2` FOREIGN KEY (`idPedido`) REFERENCES `pedidos-cervezas` (`idPedido`);
+ALTER TABLE `pedidos-cervezas`
+  ADD CONSTRAINT `pedidos-cervezas_ibfk_1` FOREIGN KEY (`idPedido`) REFERENCES `pedidos` (`idPedido`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `usuarios-pedidos`
 --
 ALTER TABLE `usuarios-pedidos`
-  ADD CONSTRAINT `usuarios-pedidos_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`nombreUsuario`);
+  ADD CONSTRAINT `usuarios-pedidos_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`nombreUsuario`),
+  ADD CONSTRAINT `usuarios-pedidos_ibfk_2` FOREIGN KEY (`idPedido`) REFERENCES `pedidos` (`idPedido`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
